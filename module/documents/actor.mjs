@@ -59,12 +59,21 @@ export class SsSsActor extends Actor {
     const data = actorData.data;
     if(typeof data.health !== "undefined"){
       data.health.max = (data.health.max == null || data.health.max == 0) ? 
-        (data.dd*(Math.floor(Math.random()*(8)+1))) : data.health.max;
+        this.npcMaxHealthCalculation(data) : data.health.max;
       data.health.value = (data.health.value == null || data.health.value == -1) ?
         data.health.max : data.health.value;
     }
     data.damage = data.damage == "" ? this.npcDamageCalculation(data) : data.damage;
   }
+  
+  npcMaxHealthCalculation(data){
+    let maxHealth = 0;
+    for (let i = 0; i < data.dd; i++) {
+      maxHealth += (Math.floor(Math.random()*(8)+1));
+      }
+    return maxHealth;
+  }
+
   npcDamageCalculation(data){
     switch (data.dd) {
       case 1:
