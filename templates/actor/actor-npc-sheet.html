@@ -29,7 +29,15 @@
             <input type="text" name="data.dd" value="{{data.dd}}" data-dtype="Number"/>
           </div>
         </div>
+        
 
+        <div class="resource flex-group-center">
+          <label for="data.damage" class="resource-label">Damage</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="data.damage" value="{{data.damage}}" data-dtype="String"/>
+          </div>
+        </div>
+        
       </div>
     </div>
   </header>
@@ -38,7 +46,6 @@
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
     <a class="item" data-tab="description">Description</a>
-    <a class="item" data-tab="items">Items</a>
   </nav>
 
   {{!-- Sheet Body --}}
@@ -50,10 +57,6 @@
       {{editor content=data.biography target="data.biography" rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
-    {{!-- Owned Items Tab --}}
-    <div class="tab items" data-group="primary" data-tab="items">
-       {{> "systems/ssss/templates/actor/parts/actor-items.html"}}
-    </div>
 
   </section>
 </form>

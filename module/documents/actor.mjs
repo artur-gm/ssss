@@ -57,7 +57,38 @@ export class SsSsActor extends Actor {
 
     // Make modifications to data here. For example:
     const data = actorData.data;
-    data.health.max = (data.health.max == 0) ? (data.dd*(Math.floor(Math.random()*(8)+1))) : data.health.max;
+    if(typeof data.health !== "undefined"){
+      data.health.max = (data.health.max == null || data.health.max == 0) ? 
+        (data.dd*(Math.floor(Math.random()*(8)+1))) : data.health.max;
+      data.health.value = (data.health.value == null || data.health.value == -1) ?
+        data.health.max : data.health.value;
+    }
+    data.damage = data.damage == "" ? this.npcDamageCalculation(data) : data.damage;
+  }
+  npcDamageCalculation(data){
+    switch (data.dd) {
+      case 1:
+        return "d4";
+      case 2:
+        return "d6";
+      case 3:
+        return "d8";
+      case 4:
+        return "d10";
+      case 5:
+        return "d12";
+      case 6:
+        return "2d6";
+      case 7:
+        return "2d8";
+      case 8:
+        return "3d6";
+      case 9:
+        return "2d10";
+      default:
+        return "2d12"
+
+    }
   }
 
   /**
@@ -81,7 +112,7 @@ export class SsSsActor extends Actor {
 
     // Add level for easier access, or fall back to 0.
     if (data.attributes.level) {
-      data.lvl = data.attributes.level.value ?? 0;
+      data.lvl = data.attributes.level ?? 0;
     }
   }
 
