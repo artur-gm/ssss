@@ -1,10 +1,10 @@
 {
   "name": "ssss",
-  "title": "Sharp Swords &amp; Sinister Spells",
-  "description": "The Sharp Swords &amp; Sinister Spells system for FoundryVTT!",
+  "title": "Sharp Swords & Sinister Spells",
+  "description": "The Sharp Swords & Sinister Spells system for FoundryVTT!",
   "version": "1.0.0",
   "minimumCoreVersion": "0.8.6",
-  "compatibleCoreVersion": "9",
+  "compatibleCoreVersion": "10",
   "author": "Artur Melo",
   "esmodules": ["module/ssss.mjs"],
   "styles": ["css/ssss.css"],
