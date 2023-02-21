@@ -19,5 +19,10 @@
     "gulp-autoprefixer": "^8",
     "gulp-sass": "^4",
     "gulp-sourcemaps": "^3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "husky": "^8.0.3"
   }
 }
