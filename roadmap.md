@@ -3,6 +3,7 @@
 - PC Sheets
 
   - Temporary Attribute Modifiers
+    - Hideable
   - Rollable Attributes ✔️
     - Positive/Negative die for attribute rolls
   - Customization based on Archetype
