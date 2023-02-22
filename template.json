@@ -44,8 +44,7 @@
       "templates": ["base"]
     },
     "spell": {
-      "templates": ["base"],
-      "spellLevel": 1
+      "templates": ["base"]
     }
   }
 }
