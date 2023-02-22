@@ -1,10 +1,10 @@
 # Roadmap
 
 - PC Sheets
-
-  - Temporary Attribute Modifiers
+  - Luck Dice
+  - Temporary Attribute Modifiers ✔
     - Hideable
-  - Rollable Attributes ✔️
+  - Rollable Attributes ✔
     - Positive/Negative die for attribute rolls
   - Customization based on Archetype
     - Health Dice
