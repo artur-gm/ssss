@@ -70,7 +70,7 @@
               type="text"
               class="rollable"
               data-label="Physique Check"
-              data-roll="1d20cs<={{data.attributes.physique}}"
+              data-roll="1d20cs<=({{data.attributes.physique}} + {{data.attributes.tempPhysique}})"
               name="data.attributes.physique"
               value="{{data.attributes.physique}}"
               data-dtype="Number"
@@ -88,7 +88,7 @@
               type="text"
               class="rollable"
               data-label="Agility Check"
-              data-roll="1d20cs<={{data.attributes.agility}}"
+              data-roll="1d20cs<=({{data.attributes.agility}} + {{data.attributes.tempAgility}})"
               name="data.attributes.agility"
               value="{{data.attributes.agility}}"
               data-dtype="Number"
@@ -106,7 +106,7 @@
               type="text"
               class="rollable"
               data-label="Intellect Check"
-              data-roll="1d20cs<={{data.attributes.intellect}}"
+              data-roll="1d20cs<=({{data.attributes.intellect}} + {{data.attributes.tempIntellect}})"
               name="data.attributes.intellect"
               value="{{data.attributes.intellect}}"
               data-dtype="Number"
@@ -119,14 +119,60 @@
           <label for="data.attributes.willpower" class="resource-label"
             >Willpower</label
           >
-          <div class="resource-content flexrow flex-center flex-between">
+          <div class="resource-content flexrow flex-center flex-between" >
             <input
               type="text"
               class="rollable"
               data-label="Willpower Check"
-              data-roll="1d20cs<={{data.attributes.willpower}}"
+              data-roll="1d20cs<=({{data.attributes.willpower}} + {{data.attributes.tempWillpower}})"
               name="data.attributes.willpower"
               value="{{data.attributes.willpower}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="resources grid grid-4col">
+        <!-- class for character temporary physique attribute-->
+        <div class="resource flex-group-center">
+          <div class="resource-content flexrow flex-center flex-between" title="Temporary Physique Modifier">
+            <input
+              type="text"
+              name="data.attributes.tempPhysique"
+              value="{{data.attributes.tempPhysique}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+        <!-- class for character temporary agility attribute-->
+        <div class="resource flex-group-center">
+          <div class="resource-content flexrow flex-center flex-between" title="Temporary Agility Modifier">
+            <input
+              type="text"
+              name="data.attributes.tempAgility"
+              value="{{data.attributes.tempAgility}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+        <!-- class for character temporary intellect attribute-->
+        <div class="resource flex-group-center">
+          <div class="resource-content flexrow flex-center flex-between" title="Temporary Intellect Modifier">
+            <input
+              type="text"
+              name="data.attributes.tempIntellect"
+              value="{{data.attributes.tempIntellect}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+        <!-- class for character temporary willpower attribute-->
+        <div class="resource flex-group-center" >
+          <div class="resource-content flexrow flex-center flex-between" title="Temporary Willpower Modifier">
+            <input
+              type="text"
+              name="data.attributes.tempWillpower"
+              value="{{data.attributes.tempWillpower}}"
               data-dtype="Number"
             />
           </div>
