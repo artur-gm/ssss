@@ -18,7 +18,9 @@
         "physique":  0,
         "agility":  0,
         "intellect":  0,
-        "willpower":  0
+        "willpower":  0,
+        "coin":  2,
+        "luck":  3
         }
       }
     },

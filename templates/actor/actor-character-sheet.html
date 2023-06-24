@@ -57,9 +57,10 @@
             />
           </div>
         </div>
+
       </div>
 
-      <div class="resources grid grid-4col">
+      <div class="resources grid grid-5col">
         <!-- class for character physique attribute-->
         <div class="resource flex-group-center">
           <label for="data.attributes.physique" class="resource-label"
@@ -131,8 +132,25 @@
             />
           </div>
         </div>
+        <!-- class for character luck attribute-->
+        <div class="resource flex-group-center">
+          <label for="data.attributes.luck" class="resource-label"
+            >Luck</label
+          >
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              class="rollable"
+              data-label="Luck Check"
+              data-roll="1d6cs<=({{data.attributes.luck}} + {{data.attributes.tempLuck}})"
+              name="data.attributes.luck"
+              value="{{data.attributes.luck}}"
+              data-dtype="Number"
+            />
+          </div>
       </div>
-      <div class="resources grid grid-4col">
+      </div>
+      <div class="resources grid grid-5col">
         <!-- class for character temporary physique attribute-->
         <div class="resource flex-group-center">
           <div class="resource-content flexrow flex-center flex-between" title="Temporary Physique Modifier">
@@ -173,6 +191,62 @@
               type="text"
               name="data.attributes.tempWillpower"
               value="{{data.attributes.tempWillpower}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+        <!-- class for character temporary luck attribute-->
+        <div class="resource flex-group-center">
+          <div class="resource-content flexrow flex-center flex-between" title="Temporary Luck Modifier">
+            <input
+              type="text"
+              name="data.attributes.tempLuck"
+              value="{{data.attributes.tempLuck}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+      <div class="resources grid grid-3col">
+        <!-- class for character coin attribute-->
+        <div class="resource flex-group-center">
+          <label for="data.attributes.coin" class="resource-label"
+            >Coin</label
+          >
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              class="rollable"
+              name="data.attributes.coin"
+              value="{{data.attributes.coin}}"
+              data-dtype="Number"
+              data-roll="1d6cs<=({{data.attributes.coin}})"
+            />
+          </div>
+        </div>
+        <!-- class for tresure points -->
+        <div class="resource flex-group-center">
+          <label for="data.attributes.treasurePoints" class="resource-label"
+            >Treasure</label
+          >
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="data.attributes.treasurePoints"
+              value="{{data.attributes.treasurePoints}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+        <!-- class for adventures until next level-->
+        <div class="resource flex-group-center">
+          <label for="data.attributes.adventures" class="resource-label"
+            >Adventures</label
+          >
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="data.attributes.adventures"
+              value="{{data.attributes.adventures}}"
               data-dtype="Number"
             />
           </div>
