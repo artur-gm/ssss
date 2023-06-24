@@ -69,7 +69,7 @@ export class SsSsActor extends Actor {
   npcMaxHealthCalculation(data){
     let maxHealth = 0;
     for (let i = 0; i < data.dd; i++) {
-      maxHealth += (Math.floor(Math.random()*(8)+1));
+      maxHealth += (Math.floor(Math.random()*(6)+1));
       }
     return maxHealth;
   }
@@ -77,25 +77,25 @@ export class SsSsActor extends Actor {
   npcDamageCalculation(data){
     switch (data.dd) {
       case 1:
-        return "d4";
+        return "d6-1";
       case 2:
         return "d6";
       case 3:
-        return "d8";
+        return "d6+1";
       case 4:
-        return "d10";
+        return "d6+2";
       case 5:
-        return "d12";
-      case 6:
         return "2d6";
+      case 6:
+        return "2d6+1";
       case 7:
-        return "2d8";
+        return "2d6+2";
       case 8:
         return "3d6";
       case 9:
-        return "2d10";
+        return "3d6+1";
       default:
-        return "2d12"
+        return "3d6+2"
 
     }
   }
