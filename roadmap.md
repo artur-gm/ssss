@@ -1,9 +1,9 @@
 # Roadmap
 
 - PC Sheets
-  - Coins
-  - Treasure Points
-  - Luck Dice
+  - Coins ✔
+  - Treasure Points ✔
+  - Luck ✔
   - Temporary Attribute Modifiers ✔
     - Hideable
   - Rollable Attributes ✔
@@ -12,6 +12,7 @@
     - Skills
     - Luck
   - Short rest tracker
+  - Encumbrance
 
 - Item sheets
   - Spells
