@@ -90,12 +90,8 @@ export class SsSsActor extends Actor {
         return "2d6+1";
       case 7:
         return "2d6+2";
-      case 8:
-        return "3d6";
-      case 9:
-        return "3d6+1";
       default:
-        return "3d6+2"
+        return "3d6+"+(data.dd-8);
 
     }
   }
